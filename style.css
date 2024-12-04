@@ -1,0 +1,89 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #ee738e, #da0f16);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #fff;
+    animation: gradientAnimation 5s infinite alternate;
+}
+
+@keyframes gradientAnimation {
+    0% { background: linear-gradient(135deg, #f7b57e, #30cfc7); }
+    50% { background: linear-gradient(135deg, #5456ed, #2fd577); }
+    100% { background: linear-gradient(135deg, #6b8dff, #a92121); }
+}
+
+.login-container, .register-container, .game-container {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+input, button {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 10px;
+    border: none;
+    font-size: 16px;
+}
+
+input {
+    background-color: #fff;
+    color: #333;
+}
+
+button {
+    background-color: #ff7b7b;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+button:hover {
+    background-color: #cb0f28;
+}
+
+h1, h2 {
+    font-size: 24px;
+}
+
+#hangmanCanvas {
+    margin-top: 20px;
+}
+
+.register-link, .login-link {
+    margin-top: 10px;
+}
+
+.register-link a, .login-link a {
+    color: #ff7b7b;
+    text-decoration: none;
+}
+
+.register-link a:hover, .login-link a:hover {
+    color: #ba8a29;
+    text-decoration: underline;
+}
+
+#logout-button {
+    background-color: #ff4b5c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+#logout-button:hover {
+    background-color: #ff1f3b;
+}
+

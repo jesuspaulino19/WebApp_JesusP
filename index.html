@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+<body>
+
+    <div class="login-container">
+        <h1>Bienvenido</h1>
+        <h2>Inicia sesión o regístrate</h2>
+        <form action="/index" method="POST" onsubmit="return validateForm()">
+            <input type="text" name="username" id="username" placeholder="Usuario" required maxlength="20">
+            <small id="usernameError" class="error"></small>
+            <input type="password" name="password" id="password" placeholder="Contraseña" required minlength="6" maxlength="20">
+            <small id="passwordError" class="error"></small>
+            <button type="submit">Iniciar sesión</button>
+        </form>
+        <div class="register-link">
+            <p>¿No tienes cuenta? <a href="register.html">Regístrate aquí</a></p>
+        </div>
+    </div>
+
+
+    <script>
+        // Función de validación del formulario
+        function validateForm() {
+            let isValid = true;
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Limpiar mensajes de error previos
+            document.getElementById('usernameError').textContent = '';
+            document.getElementById('passwordError').textContent = '';
+
+            // Validación de usuario
+            if (username.length < 3 || username.length > 20) {
+                document.getElementById('usernameError').textContent = 'El nombre de usuario debe tener entre 3 y 20 caracteres.';
+                isValid = false;
+            }
+
+            // Validación de contraseña
+            if (password.length < 6 || password.length > 20) {
+                document.getElementById('passwordError').textContent = 'La contraseña debe tener entre 6 y 20 caracteres.';
+                isValid = false;
+            }
+
+            return isValid;
+        }
+    </script>
+
+</body>
+</html>
+
+
